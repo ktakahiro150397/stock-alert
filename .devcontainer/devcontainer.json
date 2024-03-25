@@ -2,7 +2,7 @@
     "name": "flutter devcontainer",
     "dockerComposeFile": "docker-compose.yml",
     "service": "flutter",
-    "workspaceFolder": "/workspaces/${workspaceFolderBasename}",
+    "workspaceFolder": "/workspace/${workspaceFolderBasename}",
     "customizations": {
         "vscode": {
             "extensions": [
