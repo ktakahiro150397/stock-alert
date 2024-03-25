@@ -1,27 +1,36 @@
 services:
-  app:
+  flutter:
     build:
       context: .
       dockerfile: Dockerfile
-    
+    environment:
+      - HOME=/root
+      - no_proxy=127.0.0.1,localhost
+      #- DISPLAY="host.docker.internal:0"
+      - DISPLAY=yanelmoserver:0
+
     volumes:
       - ../:/workspace:cached
+    network_mode: "host"
+    extra_hosts:
+      - flutter:127.0.1.1
 
     command: sleep infinity
-    
-  db:
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: app
-      MYSQL_USER: app
-      MYSQL_PASSWORD: app
-    volumes:
-      - db-data:/var/lib/mysql
   
-  adminer:
-    image: adminer
-    network_mode: service:db
+    
+#   db:
+#     image: mysql:latest
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root
+#       MYSQL_DATABASE: app
+#       MYSQL_USER: app
+#       MYSQL_PASSWORD: app
+#     volumes:
+#       - db-data:/var/lib/mysql
+  
+#   adminer:
+#     image: adminer
+#     network_mode: service:db
 
-volumes:
-  db-data:
+# volumes:
+#   db-data:
