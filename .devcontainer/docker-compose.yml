@@ -7,15 +7,15 @@ services:
       - HOME=/root
       - no_proxy=127.0.0.1,localhost
       #- DISPLAY="host.docker.internal:0"
-      - DISPLAY=yanelmoserver:0
-
+      # - DISPLAY=yanelmoserver:0
     volumes:
       - ../:/workspace:cached
     network_mode: "host"
     extra_hosts:
       - flutter:127.0.1.1
-
     command: sleep infinity
+    ports:
+      - 5555:5555
   
     
 #   db:
