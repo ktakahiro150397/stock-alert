@@ -1,0 +1,14 @@
+{
+    "name": "dart devcontainer",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${workspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Dart-Code.dart-code"
+            ]
+        }
+    }
+
+}
