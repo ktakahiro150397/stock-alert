@@ -2,7 +2,7 @@
     "name": "flutter devcontainer",
     "dockerComposeFile": "docker-compose.yml",
     "service": "flutter",
-    "workspaceFolder": "/workspace/${workspaceFolderBasename}",
+    "workspaceFolder": "/workspace/stock_alert_frontend",
     "customizations": {
         "vscode": {
             "extensions": [

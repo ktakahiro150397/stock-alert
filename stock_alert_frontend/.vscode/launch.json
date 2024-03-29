@@ -8,10 +8,6 @@
             "name": "stock_alert_frontend",
             "request": "launch",
             "type": "dart",
-            "args": [
-                "-d",
-                "linux",
-            ]
         },
         {
             "name": "stock_alert_frontend (profile mode)",
