@@ -20,7 +20,7 @@ RUN apt-get update &&  DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 
-RUN apt update && apt install -y google-chrome-stable
+# RUN apt update && apt install -y google-chrome-stable
 
 # Workdir
 WORKDIR /workspace
