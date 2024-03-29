@@ -9,10 +9,8 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                "--web-port",
-                "5555",
                 "-d",
-                "web-server"
+                "linux",
             ]
         },
         {
