@@ -4,7 +4,7 @@ FROM ubuntu:20.04
 # Set Timezone
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update &&  DEBIAN_FRONTEND=noninteractive apt-get install -y \
     git \
     unzip \
     clang \
